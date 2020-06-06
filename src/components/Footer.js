@@ -8,13 +8,13 @@ function Footer() {
 
     return(
         <footer className='mt-5'>
-            <Container>
-                <Row>
+            <Container fluid={true}>
+                <Row className='border-top justify-content-between p-3'>
                     <Col className='p-0'>
                         The Bionic House
                     </Col>
-                    <Col className='p-0'>
-                        Made by Blaire Swaby-Clacken
+                    <Col className='p-0 d-flex justify-content-end'>
+                        This site was made by Blaire Swaby-Clacken
                     </Col>
                 </Row>
             </Container>

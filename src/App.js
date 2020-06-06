@@ -6,6 +6,9 @@ import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 class App extends Component {
 
@@ -44,10 +47,16 @@ class App extends Component {
               <Nav className='ml-auto'>
                 <Link className='nav-link' to='/'>Home</Link>
                 <Link className='nav-link' to='/about'>About</Link>
-                <Link className='nav-link' to='/contact'>Contact</Link>
+                <Link className='nav-link' to='/contact'>Contact</Link> 
               </Nav>
             </Navbar.Collapse>
          </Navbar>
+
+          {/*This says: when on a certain path render the component */}
+         <Route path='/' exact render={() => <HomePage title={this.state.home.title} content={this.state.home.content} /> }/>
+         <Route path='/about' exact render={() => <AboutPage title={this.state.about.title}/>} />
+         <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title}/>} />
+
        </Container>
       <Footer />
      </Router>
