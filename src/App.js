@@ -24,7 +24,7 @@ class App extends Component {
         {title: 'Contact', path: '/contact' }
       ],
       home: {
-        title: 'Bionic House',
+        title: 'The Bionic House',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       },
       about: {
@@ -57,8 +57,8 @@ class App extends Component {
          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title}/>} />
          <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title}/>} />
 
-       </Container>
-      <Footer />
+      </Container>
+        <Footer />
      </Router>
     );
   }
