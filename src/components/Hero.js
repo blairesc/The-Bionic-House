@@ -6,14 +6,15 @@ import Col from 'react-bootstrap/Col';
 
 function Hero(props) {
     return(
-        <Jumbotron>
+        <Jumbotron className="bg-transparent jumbotron-fluid">
             <Container>
                 <Row>
                    <Col>
-                        { props.title && <h2>{props.title}</h2> }
+                        { props.title && <h1>{props.title}</h1> }
                    </Col>
                    <Col>
                         { props.content && <h6>{props.content}</h6>}
+                        <button type="button" className="btn btn-info mt-2 float-right">Learn More</button>
                    </Col>
                 </Row>
             </Container>
@@ -21,4 +22,4 @@ function Hero(props) {
     );
 }
 
-export default Hero; 
+export default Hero;

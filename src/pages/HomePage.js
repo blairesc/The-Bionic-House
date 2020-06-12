@@ -1,10 +1,14 @@
 import React from 'react';
 
 import Hero from '../components/Hero';
+import Carousel from '../containers/Carousel';
 
 function HomePage(props) {
     return(
-        <Hero title={props.title} content={props.content}/>
+        <div>
+            <Hero title={props.title} content={props.content}/>
+            <Carousel />
+        </div>
     );
 }
 
