@@ -25,7 +25,6 @@ class App extends Component {
       ],
       home: {
         title: 'The Bionic House',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       },
       about: {
         title: 'About'
@@ -38,10 +37,18 @@ class App extends Component {
 
   render() {
     return (
-     <Router>
-       <Container className="p-0">
-         <Navbar bg='transparent' expand='lg'>
-            <Navbar.Brand>The Bionic House</Navbar.Brand>
+     <div>
+       <Router>
+        <Container className="p-0">
+          <Navbar bg='transparent' expand='lg'>
+            <Navbar.Brand href="#" bsPrefix="bionic-logo">
+              The Bionic
+              <span>
+                <br/> 
+                &nbsp; &nbsp; &nbsp; 
+                House
+              </span>
+            </Navbar.Brand>
             <Navbar.Toggle className='border-0' aria-controls='navbar-toggle'/>
             <Navbar.Collapse id='navbar-toggle'>
               <Nav className='ml-auto'>
@@ -50,15 +57,17 @@ class App extends Component {
                 <Link className='nav-link' to='/contact'>Contact</Link> 
               </Nav>
             </Navbar.Collapse>
-         </Navbar>
+          </Navbar>
+          </Container>
 
           {/*This says: when on a certain path render the component */}
-         <Route path='/' exact render={() => <HomePage title={this.state.home.title} content={this.state.home.content} /> }/>
-         <Route path='/about' exact render={() => <AboutPage title={this.state.about.title}/>} />
-         <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title}/>} />
-       </Container>
-       <Footer />
+          <Route path='/' exact render={() => <HomePage title={this.state.home.title} content={this.state.home.content} /> }/>
+          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title}/>} />
+          <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title}/>} />
+        
       </Router>
+      <Footer />
+     </div>
     );
   }
 }
