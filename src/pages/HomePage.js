@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Hero from '../components/Hero';
-import Carousel from '../containers/Carousel';
+import Cards from '../components/Cards';
 
 function HomePage(props) {
     return(
         <div>
-            <Hero title={props.title} content={props.content}/>
-            <Carousel />
+            <Hero />
+            <Cards/>
         </div>
     );
 }

@@ -1,0 +1,19 @@
+.header {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.content {
+    background-color: grey;
+    padding: 15px;
+}
+
+.to-left {
+    margin-left: 100px;
+}
+
+.to-right {
+    margin-right: 100px;
+}

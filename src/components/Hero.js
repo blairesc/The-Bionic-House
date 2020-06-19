@@ -2,20 +2,23 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+
 
 function Hero(props) {
     return(
-        <Jumbotron className="bg-transparent jumbotron-fluid">
+        <Jumbotron className="bg-transparent jumbotron-fluid" style={{padding:'35px 0px'}}>
             <Container>
-                <Row>
-                   <Col>
-                        { props.title && <h1>{props.title}</h1> }
-                   </Col>
-                   <Col>
-                        { props.content && <h6>{props.content}</h6>}
-                        <button type="button" className="btn btn-info mt-2 float-right">Learn More</button>
-                   </Col>
+                <Row style={{marginLeft:'6px'}}>
+                  <h2 style={{lineHeight:'1.6'}}>  
+                      <div>
+                          <span>We create a well designed,</span>
+                      </div>
+                      <div>
+                        <span>and highly functional live workspace.</span>
+                      </div>
+                      <Button href="#"variant="outline-primary">More about us</Button>
+                  </h2>
                 </Row>
             </Container>
         </Jumbotron>
