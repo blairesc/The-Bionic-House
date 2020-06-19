@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -10,32 +10,24 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 
-class App extends Component {
+const App = () => {
+  const [title, setTitle] = useState('The Bionic House');
+  const [navLinks, setNavLinks] = useState(
+    [
+      {title: 'Home', path: '/' },
+      {title: 'About', path: '/about' },
+      {title: 'Contact', path: '/contact' }
+    ]
+  );
+  const [home, setHome] = useState('The Bionic House');
+  const [about, setAbout] = useState('About');
+  const [contact, setContact] = useState('Let\'s Talk');
 
-  constructor(props) {
-    super(props);
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, []);
 
-    //State for the top level 
-    this.state = { 
-      title: 'The Bionic House',
-      navLinks: [
-        {title: 'Home', path: '/' },
-        {title: 'About', path: '/about' },
-        {title: 'Contact', path: '/contact' }
-      ],
-      home: {
-        title: 'The Bionic House',
-      },
-      about: {
-        title: 'About'
-      },
-      contact: {
-        title: 'Let\'s Talk'
-      }
-    } 
-  }
-
-  render() {
     return (
      <div>
        <Router>
@@ -52,24 +44,23 @@ class App extends Component {
             <Navbar.Toggle className='border-0' aria-controls='navbar-toggle'/>
             <Navbar.Collapse id='navbar-toggle'>
               <Nav className='ml-auto'>
-                <Link className='nav-link' to='/'>Home</Link>
-                <Link className='nav-link' to='/about'>About</Link>
-                <Link className='nav-link' to='/contact'>Contact</Link> 
+                <Link className='nav-link' to='/'>Home  &nbsp; </Link>
+                <Link className='nav-link' to='/about'>About Us  &nbsp; </Link>
+                <Link className='nav-link' to='/contact'>Let's Talk  &nbsp; </Link> 
               </Nav>
             </Navbar.Collapse>
           </Navbar>
           </Container>
 
           {/*This says: when on a certain path render the component */}
-          <Route path='/' exact render={() => <HomePage title={this.state.home.title} content={this.state.home.content} /> }/>
-          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title}/>} />
-          <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title}/>} />
+          <Route path='/' exact render={() => <HomePage title={home.title} /> }/>
+          <Route path='/about' exact render={() => <AboutPage title={about.title}/>} />
+          <Route path='/contact' exact render={() => <ContactPage title={contact.title}/>} />
         
       </Router>
       <Footer />
      </div>
     );
-  }
 }
 
 export default App;
