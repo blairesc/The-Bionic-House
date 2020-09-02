@@ -1,26 +1,19 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
+import  { Jumbotron, Container, Row, Button } from 'react-bootstrap';
 
+import '../styles/Hero.css';
 
 function Hero(props) {
     return(
-        <Jumbotron className="bg-transparent jumbotron-fluid" style={{padding:'35px 0px'}}>
-            <Container>
-                <Row style={{marginLeft:'6px'}}>
-                  <h2 style={{lineHeight:'1.6'}}>  
-                      <div>
-                          <span>We create a well designed,</span>
-                      </div>
-                      <div>
-                        <span>and highly functional live workspace.</span>
-                      </div>
-                      <Button href="#"variant="outline-primary">More about us</Button>
-                  </h2>
-                </Row>
-            </Container>
+        <Jumbotron className="bg-transparent">
+            <h1 className="text-center display-1 font-weight-bold b-color">The Bionic House</h1>
+            <p className="text-center h2 l-height">
+                Creating a well designed, <br/>
+                and highly functional live workspace.
+            </p>
+            <p className="text-center">
+                <Button href="#" variant="outline-primary" className="mt-2">Explore</Button>
+            </p>
         </Jumbotron>
     );
 }
