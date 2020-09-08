@@ -2,22 +2,13 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import '../styles/Footer.css';
 
 
 function Footer() {
-
     return(
-        <footer className='mt-5'>
-            <Container fluid={true}>
-                <Row className='border-top justify-content-between p-3'>
-                    <Col className='p-0'>
-                        The Bionic House
-                    </Col>
-                    <Col className='p-0 d-flex justify-content-end'>
-                        This site was made by Blaire Swaby-Clacken
-                    </Col>
-                </Row>
-            </Container>
+        <footer>
+            Site made by <a href="www.blaireswabyclacken.com" target="_blank">Blaire Swaby-Clacken</a>.
         </footer>
     );
 }
