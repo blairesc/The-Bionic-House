@@ -8,7 +8,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import '../styles/ContactPage.css';
 
 
-function ContactPage(props) {
+function ContactPage() {
     return(
         <div>
             <Container>
@@ -19,7 +19,7 @@ function ContactPage(props) {
                                 <Row className="pb-2">
                                     <Col lg={12}>
                                         <div className="text-center text-white py-3 head">
-                                            <h2>Contact Us</h2>
+                                            <h2> Contact Us </h2>
                                         </div>
                                     </Col>
                                 </Row>
@@ -27,7 +27,7 @@ function ContactPage(props) {
                                     <Col lg={5} md={6}>
                                         <Row className="px-3">
                                             <Col lg={2}>
-                                                <PhoneInTalkIcon color="primary" style={{ fontSize: 27 }} />
+                                                <PhoneInTalkIcon color="action" style={{ fontSize: 27 }} />
                                             </Col>
                                             <Col lg={10}>
                                                 <h6 className="font-weight-bold pt-2">Give Us A Ring</h6>
@@ -45,7 +45,7 @@ function ContactPage(props) {
                                     <Col md={6} lg={{ size: 6, offset: 1}}>
                                         <Row className="px-3">
                                             <Col lg={2}>
-                                                <LocationOnIcon color="primary" style={{ fontSize: 27 }} />
+                                                <LocationOnIcon color="action" style={{ fontSize: 27 }} />
                                             </Col>
                                             <Col lg={10}>
                                                 <h6 className="font-weight-bold pt-2">Find Us In Office</h6>
