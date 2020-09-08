@@ -1,19 +1,74 @@
-.header {
-    padding: 10px;
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.content {
-    background-color: grey;
-    padding: 15px;
+.left-image, .right-context {
+    height: 85vh;
+    width: 100%;
 }
 
-.to-left {
-    margin-left: 100px;
+.right-context p {
+    line-height: 30px;
+    margin-right: 1.8rem;
 }
 
-.to-right {
-    margin-right: 100px;
+.border-box {
+    width: 360px;
+    height: 480px;
+    border: 5px solid #29d97b;
+    z-index: 11;
+}
+
+.about-image {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 90px;  /*90px*/
+    left: 80px; /*80px*/
+}
+
+.bionic-image { 
+    width: 470px; /*470px*/
+}
+
+@media only screen and (max-width: 480px) {
+    .border-box {
+        width: 260px;
+        height: 380px;
+    }
+    .about-image {
+        top: 65px;  /*90px*/
+        left: 60px; /*80px*/
+    }
+
+    .bionic-image {
+        width: 75%;
+    }
+
+    .right-context p {
+        margin-left: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .border-box {
+        width: 270px;
+        height: 380px;
+    }
+    .about-image {
+        top: 65px;  /*90px*/
+        left: 80px; /*80px*/
+    }
+
+    .bionic-image {
+        width: 50%;
+    }
+
+    .right-context p {
+        margin-left: 10px;
+    }
+
 }

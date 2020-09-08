@@ -1,36 +1,50 @@
 import React from 'react';
 
-import Hero from '../components/Hero';
-import ContentSection from '../components/ContentSection';
+import { Row, Col } from 'react-bootstrap';
 import '../styles/AboutPage.css';
 
 function AboutPage(props) {
     return(
-       <div>
-            <div className="header">
-                <ContentSection>
-                    About Us
-                </ContentSection>
-            </div>
-            <div className='content to-left'>
-                <ContentSection>
-                    Powerful impressions are lasting impressions. They help to define us - who we are, how we see ourselves within the larger society. Their indelibly imprint is with the patterns that shape what we ultimately become. They are the subtext of our personal narratives, our stories, which when shared, provide the irrefutable confirmation of our kinship and shared humanity, and the blessed assurance that we are not alone.
-                </ContentSection>
-            </div>
-            <br/>
-            <div className='content to-right'>
-                <ContentSection>
-                    The Bionic House is a design practice of our shared but varied human experience, a practice designed for the sole purpose of enriching people’s lives. It’s a refuge for folk who seek inspiration through the work and experiences of others. The Bionic House want to give the world their gift of the experiences that have imprinted them, and find inspiration through the imprint of others.
-                </ContentSection>
-            </div>
-            <br/>
-            <div className='content to-left'>
-                <ContentSection>
-                    Established in 2016, the firm believes that a well-designed, highly functional  live workspace that’s not only inspiring, can boost creativity and create breathing space for everyone.
-                    Believe it our not I care.”
-                </ContentSection>
-            </div>  
-       </div>
+       <Row className="no-gutters">
+           <Col md={6}>
+                <div className="left-image d-flex justify-content-center align-items-center">
+                    <div className="image-box">
+                        <div className="border-box"></div>
+                        <div className="about-image">
+                            <img src="./bionic_images/bionic_about.jpg" alt="Bionic About" className="bionic-image"/>
+                        </div>
+                    </div>
+                </div>
+           </Col>
+           <Col md={6}>
+                <div className="right-context">
+                    <h2>About Us</h2>
+                    <p>
+                        Powerful impressions are lasting impressions. They help to define us - who we are,
+                        how we see ourselves within the larger society. Their indelibly imprint is with the 
+                        patterns that shape what we ultimately become. They are the subtext of our personal 
+                        narratives, our stories, which when shared, provide the irrefutable confirmation of
+                        our kinship and shared humanity, and the blessed assurance that we are not alone.
+                    </p>
+
+                    <p>
+                        The Bionic House is a design practice of our shared but varied human experience, 
+                        a practice designed for the sole purpose of enriching people’s lives. It’s a refuge 
+                        for folk who seek inspiration through the work and experiences of others. 
+                        The Bionic House want to give the world their gift of the experiences that have 
+                        imprinted them, and find inspiration through the imprint of others.
+                    </p>
+
+                    <h2>Our Mission </h2>
+                    <p>
+                        Established in 2016, the firm believes that a well-designed, highly functional live 
+                        workspace that’s not only inspiring, but can boost creativity and create breathing space 
+                        for everyone.
+                        "Believe it our not I care.”
+                    </p>
+                </div>
+           </Col>
+       </Row>
     );
 }
 
