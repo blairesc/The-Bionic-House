@@ -31,9 +31,15 @@ const App = () => {
     <div>
       <Router>
         <Container className="p-0" fluid={true}>
-          <Navbar bg='transparent' expand='lg' className="mb-3">
-            <Navbar.Brand href="#" bsPrefix="">
-              The Bionic House
+          <Navbar bg='transparent' expand='lg' className="mb-2">
+            <Navbar.Brand href="/">
+            <img
+              src="/images/favicon.png"
+              width="32"
+              height="32"
+              className="d-inline-block align-top"
+              alt="Bionic House logo"
+            />
             </Navbar.Brand>
             <Navbar.Toggle className='border-0' aria-controls='navbar-toggle'/>
             <Navbar.Collapse id='navbar-toggle'>

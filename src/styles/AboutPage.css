@@ -10,8 +10,14 @@
 }
 
 .right p {
-    line-height: 33px;
+    line-height: 30px;
     margin-right: 2rem;
+    color: black;
+}
+
+.right .line {
+    border: 2px solid #16cc6b;
+    width: 50%;
 }
 
 .border-box {
@@ -32,15 +38,52 @@
 .bionic-image { 
     width: 470px; /*470px*/
 }
-
 @media only screen and (min-width: 1200px) {
     .about-image {
         left: 70px;
     }
+}
+
+@media only screen and (min-width: 771px) and (max-width: 1123px) {
+    .border-box {
+        width: 300px;
+        height: 480px;
+    }
+
+    .about-image {
+        left: 65px;
+        top: 80px;
+    }
+    .bionic-image {
+        width: 380px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 750px) {  
+    .border-box {
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    .left {
+        background-image: url(/images/QuietHouse/quiethouse1.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
 
     .bionic-image {
-        width: 490px;
+        display: none;
     }
+   /* .about-image {
+        left: 85px;
+    }
+
+    .right p,
+    .right h2 {
+        margin-left: 10px;
+    }*/
 }
 
 @media only screen and (max-width: 600px) {
@@ -49,9 +92,16 @@
         height: 0px;
         border: 0px;
     }
-   
+
+    .left {
+        background-image: url(/images/QuietHouse/quiethouse1.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
     .bionic-image {
-        width: 75%;
+        display: none;
     }
 
     .right p {
@@ -60,6 +110,10 @@
 
     .right h2 { 
         margin-left: 5px;
+    }
+
+    .right .line {
+        width: 85%;
     }
 
 }

@@ -19,6 +19,7 @@ function AboutPage(props) {
            <Col md={6}>
                 <div className="right">
                     <h2>About Us</h2>
+                    <div className="line"></div>
                     <p>
                         Powerful impressions are lasting impressions. They help to define us - who we are,
                         how we see ourselves within the larger society. Their indelibly imprint is with the 
@@ -36,6 +37,7 @@ function AboutPage(props) {
                     </p>
 
                     <h2>Our Mission </h2>
+                    <div className="line"></div>
                     <p>
                         Established in 2016, the firm believes that a well-designed, highly functional live 
                         workspace that’s not only inspiring, but can boost creativity and create breathing space 
