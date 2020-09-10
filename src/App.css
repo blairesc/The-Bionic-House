@@ -6,17 +6,7 @@ body > #root > div {
   height: 100vh;
 }
 
-.bionic-logo {
-  font-size: 1.5rem;
-  color: black;
-  letter-spacing: 0.1rem;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-
-.bionic-logo:hover {
-  text-decoration: none;
-  color: black;
+.nav-link {
+  font-size: 1.2rem;
 }
 

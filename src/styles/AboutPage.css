@@ -4,20 +4,20 @@
     box-sizing: border-box;
 }
 
-.left-image, .right-context {
+.left, .right {
     height: 85vh;
     width: 100%;
 }
 
-.right-context p {
-    line-height: 30px;
-    margin-right: 1.8rem;
+.right p {
+    line-height: 33px;
+    margin-right: 2rem;
 }
 
 .border-box {
     width: 360px;
     height: 480px;
-    border: 5px solid #29d97b;
+    border: 6px solid #16cc6b;
     z-index: 11;
 }
 
@@ -25,50 +25,42 @@
     width: 100%;
     position: absolute;
     z-index: 1;
-    top: 90px;  /*90px*/
-    left: 80px; /*80px*/
+    top: 90px; 
+    left: 80px; 
 }
 
 .bionic-image { 
     width: 470px; /*470px*/
 }
 
-@media only screen and (max-width: 480px) {
-    .border-box {
-        width: 260px;
-        height: 380px;
-    }
+@media only screen and (min-width: 1200px) {
     .about-image {
-        top: 65px;  /*90px*/
-        left: 60px; /*80px*/
+        left: 70px;
     }
 
+    .bionic-image {
+        width: 490px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .border-box {
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+   
     .bionic-image {
         width: 75%;
     }
 
-    .right-context p {
+    .right p {
         margin-left: 10px;
+    }
+
+    .right h2 { 
+        margin-left: 5px;
     }
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .border-box {
-        width: 270px;
-        height: 380px;
-    }
-    .about-image {
-        top: 65px;  /*90px*/
-        left: 80px; /*80px*/
-    }
-
-    .bionic-image {
-        width: 50%;
-    }
-
-    .right-context p {
-        margin-left: 10px;
-    }
-
-}

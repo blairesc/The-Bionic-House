@@ -6,6 +6,7 @@ const ProjectTitle = (props) => {
             <h2>
                 { props.children }
             </h2>
+            <br/>
         </div>
     );
 }

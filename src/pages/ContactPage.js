@@ -13,7 +13,7 @@ function ContactPage() {
         <div>
             <Container>
                 <Row>
-                    <Col lg={7} className="mx-auto">
+                    <Col lg={6} className="mx-auto mt-2">
                         <Card className="shadow">
                             <Card.Body>
                                 <Row className="pb-2">
@@ -34,7 +34,7 @@ function ContactPage() {
                                             </Col> 
                                             <Col lg= {{ size: 4, offset: 1}} >
                                                 <p>
-                                                    Gary Architect <br />
+                                                    Gary Williams <br />
                                                     (954) 456-9827 <br />
                                                     Mon-Fri, 8:00 - 5:00
                                                 </p>
@@ -53,7 +53,7 @@ function ContactPage() {
                                             <Col lg={{ size: 5, offset: 1}} className="pl-4">
                                                 <p>
                                                     2965 Illinois Avenue, <br />
-                                                    Boca Raton Fl 33013, <br />
+                                                    Plantation Fl 33013, <br />
                                                     USA
                                                 </p>
                                             </Col>

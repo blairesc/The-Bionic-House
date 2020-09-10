@@ -7,17 +7,17 @@ function AboutPage(props) {
     return(
        <Row className="no-gutters">
            <Col md={6}>
-                <div className="left-image d-flex justify-content-center align-items-center">
+                <div className="left d-flex justify-content-center align-items-center">
                     <div className="image-box">
                         <div className="border-box"></div>
                         <div className="about-image">
-                            <img src="./bionic_images/bionic_about.jpg" alt="Bionic About" className="bionic-image"/>
+                            <img src="/images/QuietHouse/quiethouse1.jpg" alt="Bionic About" className="bionic-image"/>
                         </div>
                     </div>
                 </div>
            </Col>
            <Col md={6}>
-                <div className="right-context">
+                <div className="right">
                     <h2>About Us</h2>
                     <p>
                         Powerful impressions are lasting impressions. They help to define us - who we are,
